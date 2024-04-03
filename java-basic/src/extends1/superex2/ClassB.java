@@ -12,6 +12,11 @@ public class ClassB extends ClassA {
 
         // 기본 생성자 (ClassA의 생성자), 생략 가능하다.
         // super();
+
+        /* 생성자의 첫 줄에 this(...) 사용도 가능하다.
+         그러나, 자식 클래스의 생성자에서 반드시 한 번은 첫 줄에 super(...)를 사용하여
+         부모 클래스의 생성자를 호출해주어야 한다. */
+        this(a, 200);
         System.out.println("ClassB의 생성자! a = " + a);
     }
 
