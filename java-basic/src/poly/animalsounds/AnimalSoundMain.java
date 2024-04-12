@@ -20,6 +20,14 @@ public class AnimalSoundMain {
         // 아래와 같이 메서드를 호출하는 방식으로 중복을 제거할 수 있다.
         // 그러나, 각 동물은 타입이 다른 클래스이므로 매개변수로 전달하는 것이 불가하다.
         soundCow(cow);
+
+        // 배열과 for문을 활용하는 방식으로 중복을 제거할 수 있다.
+        // 그러나, 하나의 배열에 세 동물을 모두 넣을 수는 없다.
+        // Cow[] cowArr = {dog, cat, cow}; => 세 동물이 다른 타입(클래스)이므로 Cow 배열에 담을 수 없다.
+
+//        for (Cow cow : cowArr) {
+//            cowArr.sound();
+//        }
     }
 
     private static void soundCow(Cow cow) {
