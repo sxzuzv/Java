@@ -2,20 +2,22 @@ package poly.polyanimalsounds;
 
 public class PolyAnimalSoundMain2 {
     public static void main(String[] args) {
-        Dog dog = new Dog();
-        Cat cat = new Cat();
-        Cow cow = new Cow();
-
         // 배열과 for문을 사용한 중복 제거
         // 부모는 자식을 담을 수 있으므로, Animal 타입의 배열에 동물을 원소로 담을 수 있다.
-        Animal[] animalArr = {dog, cat, cow};   // = new Animal[]{...} 축약
 
-        // 동물의 추가 여부에 관계 없이 변경되지 않는 코드
+        // 개선: (Ctrl+Alt+N) 각 동물 객체 생성과 배열 원소 적용을 동시에 처리한다.
+        Animal[] animalArr = {new Dog(), new Cat(), new Cow()};   // = new Animal[]{...} 축약
+
         for (Animal animal : animalArr) {
-            System.out.println("동물 소리 테스트 시작!");
-            animal.sound();
-            System.out.println("동물 소리 테스트 종료!");
-
+            // 개선: (Ctrl+Alt+M) 코드 범위를 선택하여 메서드 자동 추출
+            soundAnimal(animal);
         }
+    }
+
+    // 동물의 추가 여부에 관계 없이 변경되지 않는 코드
+    private static void soundAnimal(Animal animal) {
+        System.out.println("동물 소리 테스트 시작!");
+        animal.sound();
+        System.out.println("동물 소리 테스트 종료!");
     }
 }
