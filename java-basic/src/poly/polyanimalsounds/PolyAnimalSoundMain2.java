@@ -9,7 +9,7 @@ public class PolyAnimalSoundMain2 {
         Animal[] animalArr = {new Dog(), new Cat(), new Cow()};   // = new Animal[]{...} 축약
 
         for (Animal animal : animalArr) {
-            // 개선: (Ctrl+Alt+M) 코드 범위를 선택하여 메서드 자동 추출
+            // 개선: (Ctrl+Alt+M) 선택한 코드 범위를 메서드로 자동 추출한다.
             soundAnimal(animal);
         }
     }
