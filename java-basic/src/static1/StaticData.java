@@ -6,6 +6,6 @@ public class StaticData {
 
     public StaticData(String name) {
         this.name = name;
-        count++;
+        count++;    // StaticData.count++; 로 작성해야 맞지만, 동일 클래스의 정적 변수 사용이므로 생략 가능하다.
     }
 }
